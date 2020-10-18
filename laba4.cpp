@@ -72,4 +72,3 @@ if (scanf("%d", &a[i]))
     getchar(); getchar();
     return 0;
 }
-
