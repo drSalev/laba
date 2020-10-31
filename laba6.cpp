@@ -79,6 +79,11 @@ int main()
 			printf("[%d] ", mt1[i][j]);
 		}
 	} // Конец вывода измененной строки
+	for (i = 0; i < n; i++) 
+	{
+                free(mt1[i]);
+        }
+        free(mt1);
 	getchar(); getchar();
 	return 0;
 }
