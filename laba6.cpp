@@ -79,11 +79,11 @@ int main()
 			printf("[%d] ", mt1[i][j]);
 		}
 	} // Конец вывода измененной строки
-	for (i = 0; i < n; i++) 
+	for (i = 0; i < n; i++) // Начало освобождения памяти
 	{
                 free(mt1[i]);
         }
-        free(mt1);
+        free(mt1); // Конец освобждения памяти
 	getchar(); getchar();
 	return 0;
 }
