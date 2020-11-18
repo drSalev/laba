@@ -5,6 +5,7 @@
 короткого слова.
 */
 
+
 #include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
