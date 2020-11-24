@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+
 int main()
 {
 	setlocale(LC_ALL, "Russian"); // русификация
@@ -34,6 +35,7 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		j = 0;
+		sl = 0;
 		while (str[i][j]) // цикл для подсчитывания количества слов в предложении
 		{
 			while (str[i][j] == ' ')
@@ -43,15 +45,15 @@ int main()
 			}
 			while (str[i][j] != ' ' && str[i][j] != '\0')
 			{
-				if (sl == 0) 
+				if (sl == 0 && str[i][j] != '—')
 				{
 					sl = 1;
 					kl++;
 				}
-				if (str[i][j] == '.')
+				if (str[i][j] == '.' || str[i][j] == '!' || str[i][j] == '?') // Нахождение предложений с четным количеством слов
 				{
 					a++;
-					if (kl % 2 == 0) // Нахождение предложений с четным количеством слов
+					if (kl % 2 == 0) 
 					{
 						printf(" Ваше %d предложение имеет четное количество строк.\n", a);
 					}
